@@ -1,5 +1,7 @@
 # tasks-mcp
 
+**Language:** **English** · [Español](README.es.md)
+
 A local task-management backend built **for LLMs to use as persistent memory**.
 
 Unlike Trello, Linear, or Plane — which are optimized for human teams — `tasks-mcp` treats execution plans, attempt logs, and reasoning context as first-class fields. It exposes two facades over a single SQLite database:
