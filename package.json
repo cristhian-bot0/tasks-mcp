@@ -1,0 +1,38 @@
+{
+  "name": "tasks-mcp",
+  "version": "0.1.0",
+  "description": "Local task backend for LLMs — MCP + REST facades over SQLite",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev:mcp": "tsx src/mcp/server.ts",
+    "dev:rest": "tsx src/rest/server.ts",
+    "start:mcp": "node dist/mcp/server.js",
+    "start:rest": "node dist/rest/server.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/core/migrate.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "better-sqlite3": "^11.7.0",
+    "drizzle-orm": "^0.38.2",
+    "hono": "^4.6.14",
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-openapi": "^0.18.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.2",
+    "drizzle-kit": "^0.30.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
